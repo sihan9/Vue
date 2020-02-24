@@ -1,0 +1,24 @@
+{
+  "name": "JYbooks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sihan9/JYbooks.git"
+  },
+  "keywords": [],
+  "author": "sihan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sihan9/JYbooks/issues"
+  },
+  "homepage": "https://github.com/sihan9/JYbooks#readme"
+}
