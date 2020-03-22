@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>轮播图</title>
+		<link rel="stylesheet" type="text/css" href="Carousel.css"/>
+	</head>
+	<body>
+		<div id="app">
+			<div id="imgs">
+				<transition-group tag="ul" class='imglist' name="list">
+					<li v-for="(items,index) in list"
+						v-bind:key="items.index"
+						v-show="index === myindex"
+						v-on:mouseover="stop"
+						v-on:mouseout="go"
+					>
+						<img :src="items.image" :alt="items.desc">
+					</li>
+				</transition-group>
+				<div class="left"
+				     v-on:click="left"
+					 v-on:mouseover="stop"
+					 v-on:mouseout="go"
+				>&lt;</div>
+				<div class="right"
+					v-on:click="right"
+					v-on:mouseover="stop"
+					v-on:mouseout="go"
+				>&gt;</div>
+				<div id="dot">
+					<ul>
+						<li
+							v-on:click="dotclick(0)"
+							v-bind:class="isaction[0]?action:dotlist"
+						>1</li>
+						<li
+							v-on:click="dotclick(1)"
+							v-bind:class="isaction[1]?action:dotlist"
+						>2</li>
+						<li
+							v-on:click="dotclick(2)"
+							v-bind:class="isaction[2]?action:dotlist"
+						>3</li>
+					</ul>
+				</div>
+			</div> 
+		</div>
+	</body>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="Carousel.js"></script>
+</html>
