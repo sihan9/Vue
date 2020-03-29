@@ -4,43 +4,57 @@
 
 |            |      |                    |      |
 | :--------: | :--: | :----------------: | :--: |
-|  模板语句  |  √   |     自定义指令     |      |
-|  条件语句  |  √   |        路由        |      |
-|  循环语句  |  √   |        过渡        |      |
+|  模板语句  |  √   |     自定义指令     |  √   |
+|  条件语句  |  √   |        路由        |  √   |
+|  循环语句  |  √   |        过渡        |  √   |
 |  监听属性  |  √   |        混入        |      |
 |  样式绑定  |  √   |    Ajax(axios)     |      |
 | 事件处理器 |  √   | Ajax(vue-resource) |      |
-|    表单    |      |      响应接口      |      |
-|    组件    |      |        实例        |      |
+|    表单    |  √   |      响应接口      |      |
+|    组件    |  √   |        实例        |      |
 
-### 2、轮播图
+### 2、vuecli 使用
 
-[轮播图页面]( https://sihan9.github.io/Vue/01-Carousel/)
+使用npm淘宝镜像
+```
+$ npm install -g cnpm --registry=https://registry.npm.taobao.org
+```
 
-#### 已实现功能：
+这样就可以使用 cnpm 命令来安装模块了：
 
-1、自动轮播
+```
+$ cnpm install [name]
+```
 
-2、下方圆点对应图片进行样式变化，点击切换对应轮播图片
+#### 命令行工具
 
-3、左右箭头可以前后切换轮播图片
+Vue.js 提供一个官方命令行工具，可用于快速搭建大型单页应用。
 
-4、鼠标移上，暂停轮播，鼠标移除，继续轮播 
 
-#### 过程中遇到的问题：
+```
+\# 全局安装 vue-cli
 
-##### 问题1： 轮播图只能向左滑动（单方向），无法向右滑动 
+$ cnpm install --global vue-cli
 
-使用css变量，在js文件中通过改变css变量，实现左右滑动document.styleSheets["0"].cssRules["0"].style.cssText
+\# 创建一个基于 webpack 模板的新项目
 
-| !!! 在HBuilder编译器中内置浏览器可以使用上述方法，可以修改css变量，完成左右滑动需要 |
-| ------------------------------------------------------------ |
-| 但是在谷歌64位浏览器和ie9中无法获得cssRules，[查找相关资料](https://stackoverflow.com/questions/49161159/uncaught-domexception-failed-to-read-the-rules-property-from-cssstylesheet)，不过没找到能解决的方法。（大哭）所以到底该怎么让轮播前后轮播呢[思考.jpg]。 |
+$ vue init webpack my-project
 
-##### 问题2：下方原点，只能‘跳转’到点击对应的图片，不能‘轮播’到对应图片。
+\# 这里需要进行一些配置，默认回车即可
 
-暂无解决方案
+进入项目，安装并运行：
 
-#### 其他思考：
+$ cd my-project
+$ cnpm install
+$ cnpm run dev
+```
 
-如果不使用css变量，能实现轮播向前向后双向轮播吗？
+
+
+### 3、后台管理系统
+
+#### 框架搭建
+
+使用第三方组件：[element]( https://element.eleme.cn/#/zh-CN )
+
+使用路由及自定义组件，搭建框架
